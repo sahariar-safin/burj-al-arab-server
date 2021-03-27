@@ -9,7 +9,7 @@ const app = express();
 app.use(cors());
 app.use(bodyParser.json());
 
-const serviceAccount = require("./config/burj-al-arab-khalifa-firebase-adminsdk-imn7k-6e4342a7b6.json");
+const serviceAccount = require(process.env.FIREBASE_DB);
 
 admin.initializeApp({
     credential: admin.credential.cert(serviceAccount)
