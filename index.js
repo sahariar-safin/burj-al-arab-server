@@ -1,12 +1,12 @@
 const express = require('express');
-// const cors = require('cors');
+const cors = require('cors');
 const bodyParser = require('body-parser');
 const MongoClient = require('mongodb').MongoClient;
 const admin = require('firebase-admin');
 require('dotenv').config()
 
 const app = express();
-// app.use(cors());
+app.use(cors());
 app.use(bodyParser.json());
 
 const serviceAccount = require("./config/burj-al-arab-khalifa-firebase-adminsdk-imn7k-6e4342a7b6.json");
